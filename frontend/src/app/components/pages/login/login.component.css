@@ -4,3 +4,17 @@
     text-align: center;
     margin: 200px 0 100px 0;
 }
+
+.inputWrapper{
+    .space{
+        height:20px;
+    }
+}
+
+::ng-deep .p-inputtext, .p-ripple {
+    width:474px;
+}
+
+::ng-deep .p-ripple {
+    width:474px;
+}

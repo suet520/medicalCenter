@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { FeedbackComponent } from './components/pages/feedback/feedback.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { HeaderComponent } from './components/partials/header/header.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { HeaderComponent } from './components/partials/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InputTextModule,
+    PasswordModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

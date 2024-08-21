@@ -1,0 +1,10 @@
+.wrapper{
+    padding-top: 20px;
+    .box1{
+        width: 760px;
+        height: 136px;
+        border-radius: 10px;
+        border: 1px solid #CCCCCC;
+    }
+
+}
