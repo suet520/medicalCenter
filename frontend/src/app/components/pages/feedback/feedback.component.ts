@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-feedback',
+  selector: 'feedbackPage',
   templateUrl: './feedback.component.html',
   styleUrls: ['./feedback.component.css']
 })

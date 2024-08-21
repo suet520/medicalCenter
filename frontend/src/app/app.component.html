@@ -1,14 +1,14 @@
-<div class="mainWrapper">
+<div class="mainWrapper" *ngIf="!feedback && !login">
   <div class="title">Medical Center</div>
   <div class="cards">
     <div class="card">
-      <div class="logoWrapper">
+      <div class="logoWrapper" (click)="feedback=true">
         <img class="logo" src="../assets/logo/feedback.png">
         <div class="logoTitle">顧客意見書</div>
       </div>
     </div>
     <div class="card">
-      <div class="logoWrapper">
+      <div class="logoWrapper" (click)="login=true">
         <img class="logo" src="../assets/logo/login.png">
         <div class="logoTitle">登入</div>
       </div>
@@ -16,4 +16,10 @@
 
   </div>
 
+</div>
+<div class="mainWrapper" *ngIf="login">
+  <loginPage></loginPage>
+</div>
+<div class="mainWrapper" *ngIf="feedback">
+  <feedbackPage></feedbackPage>
 </div>

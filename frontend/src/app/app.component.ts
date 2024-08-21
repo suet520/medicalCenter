@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  public feedback = false;
+  public login = false;
 }
