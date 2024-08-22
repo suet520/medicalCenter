@@ -21,7 +21,6 @@ import { TemplateComponent } from './components/pages/template/template.componen
     HeaderComponent,
     AdminComponent,
     HomeComponent,
-    FeedbackTemplateComponent,
     TemplateComponent
   ],
   imports: [
