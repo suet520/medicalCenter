@@ -1,0 +1,77 @@
+.wrapper{
+    width:100%;
+    padding: 20px;
+    display: grid;
+    gap: 24px;
+
+    .q{
+        width: 100%;
+        border: 1px solid #cccccc;
+        border-radius: 10px;
+        padding: 10px;
+        display: grid;
+        gap: 10px;
+        position: relative;
+
+        .edit{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top:0;
+            right: 0;
+            cursor: pointer;
+
+        }
+
+        .qTitle{
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .valueTitles{
+            display: flex;
+           justify-content: end;
+
+           .valueTitle{
+            width: 73px;
+           }
+        }
+
+       
+
+        .rows{
+            display: grid;
+            gap:5px;
+
+            .row{
+                height:auto;
+                width: 100%;
+                background-color: #F7F7F7;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+
+                .values{
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: end;
+                }
+
+                span{
+                    width:35%;
+                }
+            }
+        }
+    }
+}
+
+::ng-deep .p-rating .p-rating-item .p-rating-icon.p-icon {
+    width: 38px;
+    height: 25px;
+}
+
+::ng-deep .p-rating .p-rating-item.p-rating-item-active .p-rating-icon{
+    color:#24A394;
+}

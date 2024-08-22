@@ -1,0 +1,50 @@
+<div class="wrapper">
+    <div class="q"  *ngFor="let q of questions; index as i;">
+           <img class="edit" src="../../../../assets/logo/editPen.png">
+
+            <div class="qTitle">{{i + 1}}.{{q.title}}</div>
+
+            <div class="valueTitles">
+                <ng-container *ngIf="q.type == 'reaction'">
+                    <div class="valueTitle" *ngFor="let r of reactions">
+                        <div>{{r.title}}</div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="q.type == 'score'">
+                    <div style="width: 140px;text-align: start;">
+                        <div>非常不認同</div>
+                    </div>
+                    <div style="width: 140px;text-align: end;">
+                        <div>非常認同</div>
+                    </div>
+                </ng-container>
+            </div>
+
+            <div class="rows" *ngFor="let c of q.child ; index as ci;">
+                <div class=row>
+                    <span class="cTitle">{{c.title}}</span>
+                    <div class="values">
+
+                        <ng-container *ngIf="q.type == 'score'">
+                            <p-rating [cancel]="false" [stars]="6" />
+                        </ng-container>
+
+                        <ng-container *ngIf="q.type == 'reaction'">
+                            <div style=" display: flex">
+                                <div style="width: 80px; display: flex;justify-content: center;align-items: center;">
+                                    <p-triStateCheckbox inputId="tricheckbox"/>
+                                </div>
+                                <div style="width: 80px; display: flex;justify-content: center;align-items: center;">
+                                    <p-triStateCheckbox inputId="tricheckbox"/>
+                                </div>
+                                <div style="width: 80px; display: flex;justify-content: center;align-items: center;">
+                                    <p-triStateCheckbox inputId="tricheckbox"/>
+                                </div>
+                            </div>
+                        </ng-container>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
