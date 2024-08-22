@@ -9,13 +9,20 @@ import { HeaderComponent } from './components/partials/header/header.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
+import { AdminComponent } from './components/pages/admin/admin.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { TemplateComponent } from './components/pages/template/template.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FeedbackComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    AdminComponent,
+    HomeComponent,
+    FeedbackTemplateComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,

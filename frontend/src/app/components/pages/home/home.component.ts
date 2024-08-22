@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'homePage',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent {
-  title = 'frontend';
-  
+export class HomeComponent {
   constructor(activatedRoute: ActivatedRoute, private router: Router){
     activatedRoute.params.subscribe(params => {
       console.log("route params: ",params)
@@ -28,5 +26,5 @@ export class AppComponent {
     }
   }
 
-  
+
 }
