@@ -1,12 +1,12 @@
 <div class="wrapper">
     <header></header>
     <div class="agGridWrapper">
-        <div class="left">
-            <div class="button" (click)="onTemplatePage = false">
+        <div class="left" >
+            <div class="button" [ngClass]="!onTemplatePage? 'selected':''"(click)="onTemplatePage = false">
                 <img class="icon" src="../../../../assets/logo/clipboard.png">
                  意見書
             </div>
-            <div class="button" (click)="onTemplatePage = true">
+            <div class="button" [ngClass]="onTemplatePage? 'selected':''" (click)="onTemplatePage = true">
                 <img class="icon" src="../../../../assets/logo/edit.png">
                 問卷系統
             </div>

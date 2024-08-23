@@ -24,7 +24,7 @@
         display: flex;
 
         .left{
-            width:200px;
+            min-width:200px;
             border-right: 1px solid #cccccc;
             height: 100%;
             padding:20px 10px;
@@ -38,6 +38,7 @@
                 align-items: center;
                 cursor: pointer;
                 padding: 0 10px 0 25px;
+                margin-bottom: 10px;
 
                 .icon{
                     width: 30px;
@@ -59,6 +60,10 @@
             width: 100%;
         }
 
+    }
+
+    .selected{
+        background-color: #cccccc;
     }
 
     
