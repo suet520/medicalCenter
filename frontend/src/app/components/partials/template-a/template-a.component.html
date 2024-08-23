@@ -1,9 +1,10 @@
+
 <div class="wrapper">
     <div class="q"  *ngFor="let q of questions; index as i;">
-           <img class="edit" src="../../../../assets/logo/editPen.png">
+           <img class="edit" src="../../../../assets/logo/editPen.png" (click)="currentQuestionIndex = i;">
 
-            <div class="qTitle">{{i + 1}}.{{q.title}}</div>
-
+            <div class="qTitle" *ngIf="currentQuestionIndex != i ">{{i + 1}}.{{q.title}}</div>
+            <input type="text" pInputText style="width: 100%;" *ngIf="currentQuestionIndex === i " [(ngModel)]="q.title"/>
             <div class="valueTitles">
                 <ng-container *ngIf="q.type == 'reaction'">
                     <div class="valueTitle" *ngFor="let r of reactions">
@@ -22,7 +23,9 @@
 
             <div class="rows" *ngFor="let c of q.child ; index as ci;">
                 <div class=row>
-                    <span class="cTitle">{{c.title}}</span>
+                    <span *ngIf="currentQuestionIndex != i " class="cTitle">{{c.title}}</span>
+                    <input type="text" pInputText style="width: 100%;" *ngIf="currentQuestionIndex === i " [(ngModel)]="c.title"/>
+
                     <div class="values">
 
                         <ng-container *ngIf="q.type == 'score'">
@@ -31,20 +34,20 @@
 
                         <ng-container *ngIf="q.type == 'reaction'">
                             <div style=" display: flex">
-                                <div style="width: 80px; display: flex;justify-content: center;align-items: center;">
-                                    <p-triStateCheckbox inputId="tricheckbox"/>
-                                </div>
-                                <div style="width: 80px; display: flex;justify-content: center;align-items: center;">
-                                    <p-triStateCheckbox inputId="tricheckbox"/>
-                                </div>
-                                <div style="width: 80px; display: flex;justify-content: center;align-items: center;">
-                                    <p-triStateCheckbox inputId="tricheckbox"/>
-                                </div>
+                                <ng-container *ngFor="let r of reactions ;">
+                                    <div style="width: 80px; display: flex;justify-content: center;align-items: center;">
+                                        <p-checkbox  [binary]="true" inputId="r.value"/>
+                                    </div>
+                                </ng-container>
                             </div>
                         </ng-container>
 
                     </div>
                 </div>
             </div>
-        </div>
+            <ng-container *ngIf="currentQuestionIndex === i ">
+                <customButton (click)="editConfirm()" [background]="background"></customButton>
+            </ng-container>
+    </div>
+
 </div>

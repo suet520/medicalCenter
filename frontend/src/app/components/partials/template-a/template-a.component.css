@@ -1,6 +1,5 @@
 .wrapper{
     width:100%;
-    padding: 20px;
     display: grid;
     gap: 24px;
 
@@ -74,4 +73,9 @@
 
 ::ng-deep .p-rating .p-rating-item.p-rating-item-active .p-rating-icon{
     color:#24A394;
+}
+
+::ng-deep .p-checkbox .p-checkbox-box.p-highlight {
+    background-color:#24A394;
+    border-color:#24A394;
 }

@@ -1,8 +1,5 @@
 <div class="wrapper">
-    <div class="header">中央系統管理員
-        <img class="logo" src="../../../../assets/logo/user.png">
-        <img class="logo" src="../../../../assets/logo/logout.png">
-    </div>
+    <header></header>
     <div class="agGridWrapper">
         <div class="left">
             <div class="button" (click)="onTemplatePage = false">
@@ -16,6 +13,7 @@
         </div>
         <div class="right">
             <templatePage *ngIf="onTemplatePage"></templatePage>
+            <table *ngIf="!onTemplatePage"></table>
         </div>
     </div>
 </div>

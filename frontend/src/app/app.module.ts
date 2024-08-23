@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeedbackComponent } from './components/pages/feedback/feedback.component';
@@ -18,6 +17,15 @@ import { TemplateCComponent } from './components/partials/template-c/template-c.
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { RatingModule } from 'primeng/rating';
 import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
+import { ButtonComponent } from './components/partials/button/button.component';
+import { FormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import { CheckboxModule } from 'primeng/checkbox';
+import { TableModule } from 'primeng/table';
+import { TableComponent } from './components/partials/table/table.component';
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +38,9 @@ import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
     TemplateComponent,
     TemplateAComponent,
     TemplateBComponent,
-    TemplateCComponent
+    TemplateCComponent,
+    ButtonComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +50,13 @@ import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
     ButtonModule,
     RadioButtonModule,
     RatingModule,
-    TriStateCheckboxModule
+    TriStateCheckboxModule,
+    FormsModule,
+    ToastModule,
+    CheckboxModule,
+    TableModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
