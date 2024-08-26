@@ -27,14 +27,15 @@ export class TemplateAComponent {
   public currentQuestionIndex:any = null;
   public background = '#24A394'
 
-  constructor(public messageService:MessageService ){
+  constructor(private messageService:MessageService ){
     
   }
 
   editConfirm(){
     console.log("edit confirm", this.currentQuestionIndex)
-    this.currentQuestionIndex = null;
-    this.messageService.add({severity:'success', summary: 'Summary Text', detail: 'Detail Text'})
+    this.currentQuestionIndex = null;    
+    this.messageService.add({ severity: 'success', summary: '成功', detail: '保存成功' });
   }
 
 }
+33
