@@ -25,6 +25,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { TableModule } from 'primeng/table';
 import { TableComponent } from './components/partials/table/table.component';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import {HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { provideAnimations } from '@angular/platform-browser/animations';
     FormsModule,
     ToastModule,
     CheckboxModule,
-    TableModule
+    TableModule,
+    HttpClientModule
   ],
   providers: [MessageService, provideAnimations()],
   bootstrap: [AppComponent]
